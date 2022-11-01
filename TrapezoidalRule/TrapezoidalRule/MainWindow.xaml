@@ -5,8 +5,128 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrapezoidalRule"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="696" Width="1112">
+    <Grid Background="LightBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel x:Name="MainPanel" Visibility="Visible" Grid.ColumnSpan="3">
+            <TextBlock Text="Enter your quadratic equation's coefficients and integration range." FontWeight="Bold" FontSize="40" TextAlignment="Center"/>
 
+            <TextBlock Margin="0 25 0 0" Text="Coefficients" FontSize="30" FontWeight="Bold" TextAlignment="Center"/>
+
+            <Grid Margin="0 30 0 0 " MaxHeight="150px">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="a" Grid.Column="0" Grid.Row="0" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Text="b" Grid.Column="1" Grid.Row="0" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Text="c" Grid.Column="2" Grid.Row="0" FontSize="20" TextAlignment="Center" FontWeight="Bold"/>
+
+                <TextBlock Grid.Column="0" Grid.Row="1" TextAlignment="Center" FontSize="20" Margin="0 20 0 0">
+                    <TextBox x:Name="aCoefficient" Width="30" Height="30"/>
+                    <Run Text="x^2" FontWeight="Bold"/>
+                </TextBlock>
+
+                <TextBlock Grid.Column="1" Grid.Row="1" TextAlignment="Center" FontSize="20" Margin="0 20 0 0">
+                    <TextBox x:Name="bCoefficient" Width="30" Height="30"/>
+                    <Run Text="x" FontWeight="Bold"/>
+                </TextBlock>
+
+                <TextBlock Grid.Column="2" Grid.Row="1" TextAlignment="Center" FontSize="20" Margin="0 20 0 0">
+                    <TextBox x:Name="cCoefficient" Width="30" Height="30"/>
+                </TextBlock>
+            </Grid>
+
+            <TextBlock Margin="0 25 0 0" Text="Integration Range" FontSize="30" FontWeight="Bold" TextAlignment="Center"/>
+
+            <TextBlock FontSize="30" TextWrapping="Wrap" TextAlignment="center">
+                <Run Text="[" />
+                <TextBox x:Name="StartRange" Width="30" Height="30"/>            
+                <Run Text=","/>
+                <TextBox x:Name="EndRange" Width="30" Height="30"/>            
+                <Run Text="]" />
+            </TextBlock>
+
+            <TextBlock Text="Additional options:" FontWeight="Bold" FontSize="40" TextAlignment="Center"/>
+
+            <TextBlock Margin="0 25 0 0" Text="Choose DDL implementing integration." FontSize="30" FontWeight="Bold" TextAlignment="Center"/>
+            <Grid Margin="0 30 0 0 " MaxHeight="150px">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <RadioButton x:Name="checkAsm" Content="Assembler" FontSize="15" Grid.Column="1" Grid.Row="0" GroupName="Library" FontWeight="Bold">
+                    <RadioButton.LayoutTransform>
+                        <ScaleTransform ScaleX="2" ScaleY="2" />
+                    </RadioButton.LayoutTransform>
+                </RadioButton>
+
+                <RadioButton x:Name="checkCSharp" Content="C#" FontSize="15" Grid.Column="1" Grid.Row="1" GroupName="Library" FontWeight="Bold">
+                    <RadioButton.LayoutTransform >
+                        <ScaleTransform ScaleX="2" ScaleY="2" />
+                    </RadioButton.LayoutTransform>
+                </RadioButton>
+            </Grid>
+            <TextBlock Margin="0 25 0 0" Text="Choose number of threads that will be used during execution of program." FontSize="30" FontWeight="Bold" TextAlignment="Center"/>
+
+            <Slider x:Name="ThreadSlider"
+                    Margin="0,15,0,0"
+                    Minimum="1"
+                    Maximum="100"
+                    TickPlacement="BottomRight"
+                    TickFrequency="1"
+                    Width="252">
+                <Slider.LayoutTransform>
+                    <ScaleTransform ScaleX="2" ScaleY="2" />
+                </Slider.LayoutTransform>
+            </Slider>
+
+            <TextBox Width="30.5"
+                     DockPanel.Dock ="Right" 
+                     Height="16"
+                     TextAlignment="Center"
+                     FontSize="10"
+                     Text="{Binding ElementName=ThreadSlider, 
+                            Path=Value, UpdateSourceTrigger=PropertyChanged,
+                            StringFormat=N0}">
+            </TextBox>
+
+            <Button Content="Calculate Integral"
+                    FontWeight="Bold"
+                    Background="MediumPurple"
+                    Margin="0,20,0,0"
+                    Width="120"
+                    Padding="5"/>
+        </StackPanel>
+
+        <StackPanel x:Name="Results" Visibility="Hidden" Grid.Column="1">
+            <TextBlock Text="Result of integration:" Grid.Column="0" Grid.Row="0" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="" Grid.Column="0" Grid.Row="0" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="Time of Execution:" Grid.Column="0" Grid.Row="0" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="" Grid.Column="0" Grid.Row="0" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
+            <Button Content="Return"
+                    FontWeight="Bold"
+                    Background="MediumPurple"
+                    Margin="0,20,0,0"
+                    Width="150"
+                    Height="40"
+                    Padding="5"/>
+        </StackPanel>
     </Grid>
 </Window>
