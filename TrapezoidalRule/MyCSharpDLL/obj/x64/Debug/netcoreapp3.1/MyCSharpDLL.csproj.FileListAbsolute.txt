@@ -1,0 +1,10 @@
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Trapezoidal-Rule\TrapezoidalRule\MyCSharpDLL\bin\x64\Debug\netcoreapp3.1\MyCSharpDLL.deps.json
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Trapezoidal-Rule\TrapezoidalRule\MyCSharpDLL\bin\x64\Debug\netcoreapp3.1\MyCSharpDLL.dll
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Trapezoidal-Rule\TrapezoidalRule\MyCSharpDLL\bin\x64\Debug\netcoreapp3.1\MyCSharpDLL.pdb
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Trapezoidal-Rule\TrapezoidalRule\MyCSharpDLL\obj\x64\Debug\netcoreapp3.1\MyCSharpDLL.csproj.AssemblyReference.cache
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Trapezoidal-Rule\TrapezoidalRule\MyCSharpDLL\obj\x64\Debug\netcoreapp3.1\MyCSharpDLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Trapezoidal-Rule\TrapezoidalRule\MyCSharpDLL\obj\x64\Debug\netcoreapp3.1\MyCSharpDLL.AssemblyInfoInputs.cache
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Trapezoidal-Rule\TrapezoidalRule\MyCSharpDLL\obj\x64\Debug\netcoreapp3.1\MyCSharpDLL.AssemblyInfo.cs
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Trapezoidal-Rule\TrapezoidalRule\MyCSharpDLL\obj\x64\Debug\netcoreapp3.1\MyCSharpDLL.csproj.CoreCompileInputs.cache
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Trapezoidal-Rule\TrapezoidalRule\MyCSharpDLL\obj\x64\Debug\netcoreapp3.1\MyCSharpDLL.dll
+C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Trapezoidal-Rule\TrapezoidalRule\MyCSharpDLL\obj\x64\Debug\netcoreapp3.1\MyCSharpDLL.pdb

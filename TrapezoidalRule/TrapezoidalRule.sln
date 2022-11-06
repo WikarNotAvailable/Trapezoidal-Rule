@@ -3,14 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrapezoidalRule", "TrapezoidalRule\TrapezoidalRule.csproj", "{0D014A6A-2A6B-4372-A07C-9FA6087BD6F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrapezoidalRule", "TrapezoidalRule\TrapezoidalRule.csproj", "{0D014A6A-2A6B-4372-A07C-9FA6087BD6F1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{953F1200-0652-475B-A7C6-BEF444EEE47C} = {953F1200-0652-475B-A7C6-BEF444EEE47C}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyAsm", "MyAsm\MyAsm.vcxproj", "{953F1200-0652-475B-A7C6-BEF444EEE47C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCSharpDLL", "MyCSharpDLL\MyCSharpDLL.csproj", "{DADB75FE-C1E2-4FEF-BE7B-BC2FDACD7EB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCSharpDLL", "MyCSharpDLL\MyCSharpDLL.csproj", "{DADB75FE-C1E2-4FEF-BE7B-BC2FDACD7EB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,8 +47,8 @@ Global
 		{953F1200-0652-475B-A7C6-BEF444EEE47C}.Release|x86.Build.0 = Release|Win32
 		{DADB75FE-C1E2-4FEF-BE7B-BC2FDACD7EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DADB75FE-C1E2-4FEF-BE7B-BC2FDACD7EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DADB75FE-C1E2-4FEF-BE7B-BC2FDACD7EB6}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{DADB75FE-C1E2-4FEF-BE7B-BC2FDACD7EB6}.Debug|x64.Build.0 = Debug|Any CPU
+		{DADB75FE-C1E2-4FEF-BE7B-BC2FDACD7EB6}.Debug|x64.ActiveCfg = Debug|x64
+		{DADB75FE-C1E2-4FEF-BE7B-BC2FDACD7EB6}.Debug|x64.Build.0 = Debug|x64
 		{DADB75FE-C1E2-4FEF-BE7B-BC2FDACD7EB6}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{DADB75FE-C1E2-4FEF-BE7B-BC2FDACD7EB6}.Debug|x86.Build.0 = Debug|Any CPU
 		{DADB75FE-C1E2-4FEF-BE7B-BC2FDACD7EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU

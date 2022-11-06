@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "TrapezoidalRule/1.0.0": {
         "dependencies": {
+          "MyAsm": "1.0.0",
           "MyCSharpDLL": "1.0.0"
         },
         "runtime": {

@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MyAsm\MyAsm.vcxproj" />
     <ProjectReference Include="..\MyCSharpDLL\MyCSharpDLL.csproj" />
   </ItemGroup>
 

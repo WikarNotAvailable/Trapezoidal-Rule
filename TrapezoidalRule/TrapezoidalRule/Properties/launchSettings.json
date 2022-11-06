@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TrapezoidalRule": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

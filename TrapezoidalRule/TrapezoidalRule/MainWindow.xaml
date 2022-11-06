@@ -52,9 +52,9 @@
 
             <TextBlock FontSize="30" TextWrapping="Wrap" TextAlignment="center">
                 <Run Text="[" />
-                <TextBox x:Name="StartRange" Width="30" Height="30"/>            
+                <TextBox x:Name="StartRange" Width="40" Height="40"/>            
                 <Run Text=","/>
-                <TextBox x:Name="EndRange" Width="30" Height="30"/>            
+                <TextBox x:Name="EndRange" Width="40" Height="40"/>            
                 <Run Text="]" />
             </TextBlock>
 
@@ -71,7 +71,7 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <RadioButton x:Name="checkAsm" Content="Assembler" FontSize="15" Grid.Column="1" Grid.Row="0" GroupName="Library" FontWeight="Bold">
+                <RadioButton x:Name="checkAsm" Content="Assembler" FontSize="15" Grid.Column="1" Grid.Row="0" GroupName="Library" FontWeight="Bold" IsChecked="True">
                     <RadioButton.LayoutTransform>
                         <ScaleTransform ScaleX="2" ScaleY="2" />
                     </RadioButton.LayoutTransform>
@@ -112,21 +112,37 @@
                     Background="MediumPurple"
                     Margin="0,20,0,0"
                     Width="120"
-                    Padding="5"/>
+                    Padding="5"
+                    Click="CalculateIntegral"/>
         </StackPanel>
 
-        <StackPanel x:Name="Results" Visibility="Hidden" Grid.Column="1">
-            <TextBlock Text="Result of integration:" Grid.Column="0" Grid.Row="0" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
-            <TextBlock Text="" Grid.Column="0" Grid.Row="0" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
-            <TextBlock Text="Time of Execution:" Grid.Column="0" Grid.Row="0" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
-            <TextBlock Text="" Grid.Column="0" Grid.Row="0" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
+        <StackPanel x:Name="Results" Visibility="Hidden" Grid.ColumnSpan="3">
+            <TextBlock Text="Result of integration:" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock x:Name="IntegralResult" Text="" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="Time of Execution:"  FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock x:Name="ExecutionTime" Text="" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="Chosen DDL:" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
+            <TextBlock x:Name="ChosenDDL" Text="" FontSize="30" TextAlignment="Center" FontWeight="Bold"/>
             <Button Content="Return"
                     FontWeight="Bold"
                     Background="MediumPurple"
                     Margin="0,20,0,0"
                     Width="150"
                     Height="40"
-                    Padding="5"/>
+                    Padding="5"
+                    Click="GoBack"/>
+        </StackPanel>
+        
+        <StackPanel x:Name="BadInput" Visibility="Hidden" Grid.Column="1">
+            <TextBlock Text="Bad input" FontSize="30" TextAlignment="Center" FontWeight="Bold" Foreground="Red"/>
+            <Button Content="Return"
+                    FontWeight="Bold"
+                    Background="MediumPurple"
+                    Margin="0,20,0,0"
+                    Width="150"
+                    Height="40"
+                    Padding="5"
+                    Click="GoBack"/>
         </StackPanel>
     </Grid>
 </Window>
