@@ -28,12 +28,11 @@ namespace TrapezoidalRule
 
     public partial class MainWindow : Window
     {
-        [DllImport(@"C:\Users\wikar\OneDrive\Pulpit\PROGRAMOWANIE\Trapezoidal-Rule\TrapezoidalRule\x64\Debug\MyAsm.dll")]
-        static extern int MyProc1(int a, int b);
 
         private int _numberOfThreads;
         private bool _isImplementedInAsm;
         private CSharpDDLManager _cSharpManager;
+        private AsmDDLManager _asmManager;
 
         public MainWindow()
         {     
@@ -80,6 +79,7 @@ namespace TrapezoidalRule
             IntegralResult.Foreground = new SolidColorBrush(Colors.Red);
             ExecutionTime.Text = "Wait for the result, program is being executed.";
             ExecutionTime.Foreground = new SolidColorBrush(Colors.Red);
+            ChosenDDL.Text = "Loading information.";
 
             MainPanel.Visibility = Visibility.Hidden;
             Results.Visibility = Visibility.Visible;
@@ -88,6 +88,15 @@ namespace TrapezoidalRule
             if (_isImplementedInAsm)
             {
                 ChosenDDL.Text = "Assembler";
+                _asmManager = new AsmDDLManager(input);
+
+                var result = _asmManager.CalculateIntegralInAsm();
+
+                IntegralResult.Text = result.CalculatedIntegral.ToString("N3");
+                IntegralResult.Foreground = new SolidColorBrush(Colors.Black);
+                ExecutionTime.Text = result.ElapsedTime.ToString();
+                ExecutionTime.Foreground = new SolidColorBrush(Colors.Black);
+
                 return;
             }         
             else
@@ -102,6 +111,7 @@ namespace TrapezoidalRule
                 ExecutionTime.Text = result.ElapsedTime.ToString();
                 ExecutionTime.Foreground = new SolidColorBrush(Colors.Black);
             }
+            ChosenDDL.Text = "";
         }
         private void GoBack(object sender, RoutedEventArgs e)
         {

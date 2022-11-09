@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WsF7WAVJKA0vHqm0KAa+bpAIP3qewv/qa/hEytF0L76PIg9XJJ7rvDuYSIrVxmdzABpeki1uzAB6sK+mwSGRBA==",
+  "dgSpecHash": "79ivZz7vRN6uJ4uSK/sVunNwLHmkGK879excz0RbbO3ryl/QjNYak8u7ENUXrrkHuP2g0CH9o1DfgwQvoRGQLQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\wikar\\OneDrive\\Pulpit\\PROGRAMOWANIE\\Trapezoidal-Rule\\TrapezoidalRule\\TrapezoidalRule\\TrapezoidalRule.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\wikar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.30\\microsoft.netcore.app.host.win-x64.3.1.30.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

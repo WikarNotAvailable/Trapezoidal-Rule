@@ -1,2 +1,2 @@
 LIBRARY MyAsm
-EXPORTS MyProc1
+EXPORTS CalculateAreaOfTrapeze
